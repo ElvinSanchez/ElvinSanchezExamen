@@ -24,6 +24,7 @@ namespace ElvinSanchezExamen
             try
             {
                 double dato1 = Convert.ToDouble(txtDato1.Text);
+
                 if (dato1 < 1800)
                 {
                     double saldo = 1800 - dato1;
@@ -31,7 +32,10 @@ namespace ElvinSanchezExamen
                     double parte = cuota + (cuota * 0.05);
                     txtDato2.Text = parte.ToString();
                     txtDato3.Text = parte.ToString();
-                    txtDato4.Text = parte.ToString();                
+                    txtDato4.Text = parte.ToString();
+
+                    double total = dato1 + (parte * 3);
+                    txtResultado.Text = total.ToString();
                 }
                 else
                 {
@@ -41,6 +45,9 @@ namespace ElvinSanchezExamen
                         txtDato2.Text = parte.ToString();
                         txtDato3.Text = parte.ToString();
                         txtDato4.Text = parte.ToString();
+
+                        double total = dato1 + (parte * 3);
+                        txtResultado.Text = total.ToString();
                         DisplayAlert("Notificación", "Curso Cancelado en su Totalidad", "Ok");
                     }
                     else
@@ -83,8 +90,13 @@ namespace ElvinSanchezExamen
         private async void btnResumen_Clicked(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
-            string apellido = txtApellido.Text;
-            await Navigation.PushAsync(new Resumen(nombre, apellido));
+            string user = lblUser.Text;
+            string total = txtResultado.Text;
+            string dato1 = txtDato1.Text;
+            string dato2 = txtDato2.Text;
+            string dato3 = txtDato3.Text;
+            string dato4 = txtDato4.Text;
+            await Navigation.PushAsync(new Resumen(nombre, user, total, dato1, dato2, dato3, dato4));
         }
     }
 }

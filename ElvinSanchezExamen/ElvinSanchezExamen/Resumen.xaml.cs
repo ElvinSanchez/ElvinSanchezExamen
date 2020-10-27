@@ -12,13 +12,16 @@ namespace ElvinSanchezExamen
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen(string nombre, string apellido)
+        public Resumen(string nombre, string user, string total,string dato1, string dato2, string dato3, string dato4)
         {
             InitializeComponent();
-            string name = lblNombre.Text;
-            lblNombre.Text = name + nombre;
-
-            
+            lblNombre.Text = nombre;
+            lblTotal.Text = total;
+            lblUser.Text = user;
+            lblDato1.Text = dato1;
+            lblDato2.Text = dato2;
+            lblDato3.Text = dato3;
+            lblDato4.Text = dato4;
         }
     }
 }

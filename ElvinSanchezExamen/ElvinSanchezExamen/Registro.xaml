@@ -44,6 +44,8 @@
             </Grid>
 
             <Button x:Name="btnCalcular" Text="CALCULAR" Clicked="btnCalcular_Clicked" />
+
+            <Entry x:Name="txtResultado" IsReadOnly="True" HorizontalTextAlignment="Center" FontSize="40" TextColor="DarkRed" />
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
