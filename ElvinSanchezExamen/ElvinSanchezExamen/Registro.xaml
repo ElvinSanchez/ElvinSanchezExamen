@@ -5,8 +5,24 @@
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="lblUser" Text="Usuario coneccted =" HorizontalTextAlignment="Center" TextColor="DarkBlue" FontSize="20"/>
-            
-            
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Ingrese su nombre"/>
+
+            </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
