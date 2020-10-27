@@ -4,9 +4,10 @@
              x:Class="ElvinSanchezExamen.Resumen">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            <Label x:Name="lblUser" Text="Usuario coneccted =" HorizontalTextAlignment="Center" TextColor="DarkBlue" FontSize="15"/>
+
+            <Label x:Name="lblNombre"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

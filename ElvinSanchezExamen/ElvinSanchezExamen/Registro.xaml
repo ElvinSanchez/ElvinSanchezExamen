@@ -4,7 +4,19 @@
              x:Class="ElvinSanchezExamen.Registro">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="lblUser" Text="Usuario coneccted =" HorizontalTextAlignment="Center" TextColor="DarkBlue" FontSize="20"/>
+            <Label x:Name="lblUser" Text="Usuario coneccted =" HorizontalTextAlignment="Center" TextColor="DarkBlue" FontSize="15"/>
+
+            <Label Text="Registro de Estudinate" HorizontalTextAlignment="Center" TextColor="Black" FontSize="30" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Entry Grid.Row="1" x:Name="txtNombre" Placeholder="Ingrese su Nombre" FontSize="25" />
+                <Entry Grid.Row="2" x:Name="txtApellido" Placeholder="Ingrese su Apellido" FontSize="25" />
+            </Grid>
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -16,13 +28,36 @@
                     <ColumnDefinition />
                     <ColumnDefinition />
                     <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Monto Inicial" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="DarkBlue" FontSize="15" />
+                <Label Grid.Row="0" Grid.Column="1" Text="Cuota #1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="DarkBlue" FontSize="15" />
+                <Label Grid.Row="0" Grid.Column="2" Text="Cuota #2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="DarkBlue" FontSize="15" />
+                <Label Grid.Row="0" Grid.Column="3" Text="Cuota #3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="DarkBlue" FontSize="15" />
+                <Entry Grid.Row="1" Grid.Column="0" x:Name="txtDato1" Keyboard="Numeric" HorizontalTextAlignment="Center" FontSize="30" />
+                <BoxView Grid.Row="1" Grid.Column="1" Color="LightGray"/>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtDato2" IsReadOnly="True" HorizontalTextAlignment="Center" FontSize="30" />
+                <BoxView Grid.Row="1" Grid.Column="2" Color="LightGray"/>
+                <Entry Grid.Row="1" Grid.Column="2" x:Name="txtDato3" IsReadOnly="True" HorizontalTextAlignment="Center" FontSize="30" />
+                <BoxView Grid.Row="1" Grid.Column="3" Color="LightGray"/>
+                <Entry Grid.Row="1" Grid.Column="3" x:Name="txtDato4" IsReadOnly="True" HorizontalTextAlignment="Center" FontSize="30" />
+            </Grid>
+
+            <Button x:Name="btnCalcular" Text="CALCULAR" Clicked="btnCalcular_Clicked" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="Ingrese su nombre"/>
+                <Button Grid.Row="0" Grid.Column="0" x:Name="btnGuardar" Text="GUARDAR" Clicked="btnGuardar_Clicked" />
+                <Button Grid.Row="0" Grid.Column="1" x:Name="btnResumen" Text="RESUMEN" Clicked="btnResumen_Clicked" />
 
             </Grid>
-
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
